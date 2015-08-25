@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>
-      JavaScript Digital Clock
-    </title>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="clock.js"></script>
-    <link rel="stylesheet" type="text/css" href="clock.css">
-  </head>
-  <body>
-    <div id="clock">
-      <span id="hours"></span>
-      :
-      <span id="minutes"></span>
-      :
-      <span id="seconds"></span>
-      .
-      <span id="milliseconds"></span>
-    </div>
-  </body>
+    <head>
+        <title>
+            JavaScript Digital Clock
+        </title>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript">
+                
+            var flag = false;
+            
+            function pause() {
+                flag = true;
+            }
+            
+            function play(){
+                flag = false;
+            }
+        </script>
+        <script src="clock.js"></script>
+        
+
+        <link rel="stylesheet" type="text/css" href="clock.css">
+    </head>
+    <body>
+        <div id="clock">
+            <span id="hours"></span>
+            :
+            <span id="minutes"></span>
+            :
+            <span id="seconds"></span>
+            .
+            <span id="milliseconds"></span>
+        </div>
+
+        <div>
+            <button type="button" onclick="pause()"> Pause</button>
+            <button type="button" onclick="play()"> Play</button>
+        </div>
+    </body>
 </html>
