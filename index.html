@@ -7,14 +7,17 @@
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script type="text/javascript">
                 
-            var flag = false;
+            var flag_pause = false;
+            var flag_play = true;
             
             function pause() {
-                flag = true;
+                flag_pause = true;
+                flag_play = false;
             }
             
             function play(){
-                flag = false;
+                flag_pause = false;
+                flag_play = true;
             }
         </script>
         <script src="clock.js"></script>
